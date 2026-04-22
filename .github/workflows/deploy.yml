@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Se ejecuta automáticamente cuando haces "push" a la rama main
+  push:
+    branches: ['main']
+  # Permite ejecutar este flujo de trabajo manualmente desde la pestaña Actions
+  workflow_dispatch:
+
+# Otorga permisos a GITHUB_TOKEN para subir a GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Permite solo un despliegue concurrente, saltando las ejecuciones encoladas
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout de tu código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Construir el proyecto (Build)
+        run: npm run build
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Subir la carpeta dist
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Sube específicamente el directorio "dist" que genera Vite
+          path: './dist'
+
+      - name: Desplegar a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
