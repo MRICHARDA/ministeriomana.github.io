@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'motion/react';
 import { Zap, Palette, BarChart3, Shield } from 'lucide-react';
 

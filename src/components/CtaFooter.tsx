@@ -1,4 +1,4 @@
-import React from 'react';
+import { MapPin, Mail, Phone } from 'lucide-react';
 import HlsVideo from './HlsVideo';
 
 export default function CtaFooter() {

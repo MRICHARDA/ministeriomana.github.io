@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'motion/react';
 import misionVideo from '../../Video/GIF_a_Video_Conversión.mp4';
 import feImage from '../../Video/WhatsApp Image 2026-04-15 at 2.35.03 AM (3).jpeg';

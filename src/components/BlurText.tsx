@@ -62,7 +62,7 @@ export default function BlurText({
       {elements.map((element, i) => (
         <motion.span
           key={i}
-          variants={childVariants}
+          variants={childVariants as any}
           className={cn("inline-block", by === 'word' && "mr-[0.25em]")}
         >
           {element === ' ' && by === 'letter' ? '\u00A0' : element}
