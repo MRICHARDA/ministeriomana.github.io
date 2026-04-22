@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { cn } from '@/lib/utils';
 

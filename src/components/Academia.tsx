@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'motion/react';
 import { BookOpen, Map, Users, Star } from 'lucide-react';
 

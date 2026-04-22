@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'motion/react';
 import BlurText from './BlurText';
 import { ArrowUpRight, Play } from 'lucide-react';
