@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Hls from 'hls.js';
 import { cn } from '@/lib/utils';
 

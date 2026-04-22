@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import logo from '../../img/Logo_Mana.png';
 

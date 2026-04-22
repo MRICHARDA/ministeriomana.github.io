@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, useInView, animate } from 'motion/react';
 import HlsVideo from './HlsVideo';
 
