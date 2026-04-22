@@ -1,5 +1,5 @@
 import HlsVideo from './HlsVideo';
-
+import { Instagram, Facebook } from 'lucide-react';
 export default function CtaFooter() {
   return (
     <section className="relative w-full min-h-[800px] flex flex-col items-center justify-end overflow-hidden">
@@ -47,6 +47,13 @@ export default function CtaFooter() {
             &copy; 2026 Ministerios de Restauración Maná. Diseñado por Ing. Marroquin.
           </p>
           <div className="flex items-center gap-6">
+            <a href="https://www.instagram.com/ministerios.mana/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#E1306C] transition-colors">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="https://www.facebook.com/RESTAURAIONMANA?locale=es_LA" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#1877F2] transition-colors">
+              <Facebook className="w-5 h-5" />
+            </a>
+            <div className="w-px h-4 bg-white/10 hidden sm:block"></div>
             <a href="#" className="text-white/40 hover:text-white/70 transition-colors text-xs font-body">Privacidad</a>
             <a href="#" className="text-white/40 hover:text-white/70 transition-colors text-xs font-body">Términos</a>
             <a href="#" className="text-white/40 hover:text-white/70 transition-colors text-xs font-body">Contacto</a>

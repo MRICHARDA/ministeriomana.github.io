@@ -1,16 +1,18 @@
 import { motion } from 'motion/react';
-import { Quote } from 'lucide-react';
+import { Quote, Facebook } from 'lucide-react';
 
 const testimonials = [
   {
     quote: "Pastor desde 2012 fundador de Ministerios Mana en Guatemala, la cual se ha extendido hacia México y El Salvador.",
     name: "Christian Marroquin",
-    role: "Pastor General"
+    role: "Pastor General",
+    socialLink: "https://www.facebook.com/cmarroquinvilleda?locale=es_LA"
   },
   {
     quote: "Pastora desde 2012, cofundadora de Ministerios Maná en Guatemala, es la esposa del Pastor Christian y Guia espiritual de la iglesia.",
     name: "Maritza de Marroquin",
-    role: "Pastora General"
+    role: "Pastora General",
+    socialLink: "https://www.facebook.com/profile.php?id=100060847284886&locale=es_LA"
   },
   {
     quote: "Pastor, desde 2012 encargado de iglesias hijas en el extranjero, ministro de alabanza y coordinador de actividades.",
@@ -60,13 +62,20 @@ export default function Testimonials() {
             <p className="text-white/80 font-body font-light text-lg md:text-xl italic leading-relaxed mb-8 relative z-10">
               "{testimonial.quote}"
             </p>
-            <div className="flex flex-col relative z-10">
-              <span className="text-white font-body font-medium text-sm">
-                {testimonial.name}
-              </span>
-              <span className="text-white/50 font-body font-light text-xs">
-                {testimonial.role}
-              </span>
+            <div className="flex justify-between items-end relative z-10">
+              <div className="flex flex-col">
+                <span className="text-white font-body font-medium text-sm">
+                  {testimonial.name}
+                </span>
+                <span className="text-white/50 font-body font-light text-xs">
+                  {testimonial.role}
+                </span>
+              </div>
+              {testimonial.socialLink && (
+                <a href={testimonial.socialLink} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#1877F2] transition-colors">
+                  <Facebook className="w-5 h-5" />
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
