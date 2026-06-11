@@ -55,7 +55,16 @@ export default function Hero() {
           delay={100}
         />
 
-
+        <motion.div
+          initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
+          animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="mb-6"
+        >
+          <span className="bg-white/10 border border-white/20 text-white rounded-full px-4 py-1.5 text-sm font-medium backdrop-blur-sm shadow-sm">
+            Organización Sin Ánimo de Lucro
+          </span>
+        </motion.div>
 
         <motion.p
           initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
