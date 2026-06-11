@@ -42,11 +42,13 @@ export default function CtaFooter() {
         </form>
 
         {/* Footer Bar */}
-        <div className="w-full pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-xs font-body">
-            &copy; 2026 Ministerios de Restauración Maná. Diseñado por Ing. Marroquin.
-          </p>
-          <div className="flex items-center gap-6">
+        <div className="w-full pt-8 border-t border-white/10 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col gap-2 text-white/40 text-xs font-body text-center lg:text-left">
+            <p>&copy; 2026 Ministerios de Restauración Maná. Diseñado por Ing. Marroquin.</p>
+            <p>16 calle 14-99 Residenciales Petapa 2, Zona 7 de San Miguel Petapa, Guatemala, Guatemala.</p>
+            <p>Charity ID: 92654835</p>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-6">
             <a href="https://www.instagram.com/ministerios.mana/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#E1306C] transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
