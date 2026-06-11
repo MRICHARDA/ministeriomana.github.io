@@ -6,6 +6,7 @@ import FeaturesGrid from './components/FeaturesGrid';
 import Stats from './components/Stats';
 import Testimonials from './components/Testimonials';
 import Academia from './components/Academia';
+import PhotoGallery from './components/PhotoGallery';
 import CtaFooter from './components/CtaFooter';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <div id="servicios"><FeaturesChess /></div>
           <div id="estructura"><FeaturesGrid /></div>
           <div id="academia"><Academia /></div>
+          <div id="portafolio"><PhotoGallery /></div>
           <Stats />
           <div id="equipo-pastoral"><Testimonials /></div>
           <div id="contactanos"><CtaFooter /></div>

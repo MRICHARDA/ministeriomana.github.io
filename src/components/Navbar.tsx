@@ -12,7 +12,7 @@ export default function Navbar() {
       {/* Center: Navigation Links */}
       <div className="hidden md:flex pointer-events-auto">
         <div className="liquid-glass rounded-full px-1.5 py-1 flex items-center gap-1">
-          {["Inicio", "Quienes Somos", "Servicios", "Equipo Pastoral", "Academia"].map((item) => (
+          {["Inicio", "Quienes Somos", "Servicios", "Portafolio", "Equipo Pastoral", "Academia"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(' ', '-')}`}
